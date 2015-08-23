@@ -7,14 +7,12 @@
 # and its inverse)
 
 makeCacheMatrix <- function(x = matrix()) {
-        
         inv <- NULL #sets the starting value of inverted matrix
         set <- function(y) {
                 #function allowing to set the value of matrix x
                 x <<- y
                 inv <<- NULL
         }
-        
         get <- function() x #function allowing extracting the value of matrix x
         
         #allows storing inverse of matrix x computed by other function 
@@ -28,9 +26,7 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get,
              setinv = setinv,
              getinv = getinv)
-
 }
-
 
 ## Write a short comment describing this function
 
